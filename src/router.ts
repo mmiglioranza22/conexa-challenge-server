@@ -15,7 +15,7 @@ router
   .get(async (req: Request, res: Response) => {
 		const config: AxiosRequestConfig = {
 			method: 'GET',
-			url: req.params['0']
+			url: Object.keys(req.query).length > 0 ? `${req.params[0]}/?page=${req.query.page}` : req.params['0']
 		};
 		// debug
 		// eslint-disable-next-line no-console
