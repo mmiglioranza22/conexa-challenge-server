@@ -19,7 +19,7 @@ router
 		};
 		// debug
 		// eslint-disable-next-line no-console
-		// console.log({params: req.params})
+		// console.log({params: req.params, query: req.query})
 		res.send(await apiRequest(config))
   });
 
